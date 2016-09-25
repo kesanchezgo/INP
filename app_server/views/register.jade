@@ -1,0 +1,51 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  #banner.page-header
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3.section-p
+      section.articulo-g.main.row
+        articulo.col-xs-12.col-sm-10.col-md-8.col-sm-offset-1.col-md-offset-2
+          br
+          h2.text-center Únete al Gestor de Clubes
+          br
+          br
+          input#nombres.form-control(type='text' placeholder='Nombres Completos')
+          br
+          input#apellidos.form-control(type='text', placeholder='Apellidos Completos')
+          br
+          input#correo.form-control(type='email', placeholder='Correo electrónico')
+          br
+          input#contrasenia.form-control(type='password', placeholder='Contraseña')
+          br
+          input#dni.form-control(type='text', placeholder='Número de DNI')
+          br
+          input#telefono.form-control(type='tel', placeholder='Telefono')
+          br
+          select#genero.form-control(name='genero', style='padding-left: 6px;')
+            option(value='0') Selecciona tu género
+            option(value='femenino') Femenino
+            option(value='masculino') Masculino
+          br
+          .form-horizontal
+            .form-group
+              label.control-label.col-xs-12.col-sm-3.col-md-3 Cumpleaños
+              .col-xs-4.col-sm-3.col-md-3
+                select#dia.form-control(style='padding-left:3px; padding-right:0px;')
+                  option(value='0') Día
+                  +generarOption(31)
+              .col-xs-4.col-sm-3.col-md-3.reducir-m
+                select#mes.form-control(style='padding-left:3px; padding-right:0px;')
+                  option(value='0') Mes
+                  +getMeses()
+              .col-xs-4.col-sm-3.col-md-3
+                select#anio.form-control(style='padding-left:3px;padding-right:0px;')
+                  option(value='0') Año
+                  +generarOption(12)
+          br
+          button#boton-reg.btn.btn-primary.btn-lg.btn-block(type='button') Regístrate
+          hr
+          br
+          br
+

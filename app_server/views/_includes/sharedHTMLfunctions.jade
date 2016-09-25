@@ -3,3 +3,12 @@ mixin outputRating(rating)
     span.glyphicon.glyphicon-star
   - for (i = rating; i < 5; i++)
     span.glyphicon.glyphicon-star-empty
+
+mixin generarOption(tam)
+  -for (var i =1; i <=tam; i++)
+   option(value=i) #{i}
+
+mixin getMeses()
+  -var meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+  each mes, i in meses
+    option(value=i+1) #{mes}
