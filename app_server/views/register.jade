@@ -34,7 +34,7 @@ block content
               .col-xs-4.col-sm-3.col-md-3
                 select#dia.form-control(style='padding-left:3px; padding-right:0px;')
                   option(value='0') Día
-                  +generarOption(31)
+                  +generarOption(1,31)
               .col-xs-4.col-sm-3.col-md-3.reducir-m
                 select#mes.form-control(style='padding-left:3px; padding-right:0px;')
                   option(value='0') Mes
@@ -42,7 +42,7 @@ block content
               .col-xs-4.col-sm-3.col-md-3
                 select#anio.form-control(style='padding-left:3px;padding-right:0px;')
                   option(value='0') Año
-                  +generarOption(12)
+                  +generarOption(1950,2010)
           br
           button#boton-reg.btn.btn-primary.btn-lg.btn-block(type='button') Regístrate
           hr
