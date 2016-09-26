@@ -1,3 +1,3 @@
 module.exports.profile = function(req, res)  {
-  res.render('user-profile');
+  res.render('user-profile', {title: 'Gestor - Perfil'});
 };
