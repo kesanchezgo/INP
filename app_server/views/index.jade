@@ -1,5 +1,90 @@
-extends layout
+doctype
+include _includes/mixins
+html(lang='es')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title= title
+		link(rel='stylesheet', href='/bootstrap/css/flatly-bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/miestilo.css')
+		link(rel='stylesheet', href='/stylesheets/styleM.css')
+	body
+		#header.container
 
-block content
-  h1= title
-  p Welcome to #{title}
+			+nav("Eventos De Futbol", "dropdown_menu")
+				+nav_item( "/team/") Equipo
+				+nav_item( "#" ) Resultados
+				+nav_item_dropdown( "#" )( label="Campeonatos" )
+					+nav_item( "#" ) Buscar
+					+nav_item( "#" ) Inscripcion
+					+nav_divider
+					+nav_header EN JUEGO
+					+nav_item( "#" ) Locales
+					+nav_item( "#" ) Nacionales
+				
+
+		#banner.container-fluid
+			.container
+				.row
+					#banner_lemma.col-lg-6.visible-lg
+						p VIVE y DISFRUTA el FÚTBOL como nunca antes lo habias hecho 
+						a(href='/register/')
+							button#btn_banner Registrarse
+
+					#banner_img.col-lg-6
+						center
+							#main_slider.carousel.slide(data-ride= "carousel")
+								ol.carousel-indicators
+									li.active(data-target="#main_slider" data-slide-to="0")
+									li(data-target="#main_slider" data-slide-to="1")
+									li(data-target="#main_slider" data-slide-to="2")
+									li(data-target="#main_slider" data-slide-to="3")
+
+								.carousel-inner(role= "listbox")
+									.item.active
+										img(src= "/images/slider_img04.jpg" alt= "infantil")
+										#slider_caption.carousel-caption
+											h2 Crece y aprendeC
+									.item
+										img(src= "/images/slider_img03.jpg" alt= "estadisticas")
+										#slider_caption.carousel-caption
+											h2 Estadísticas y Fixture
+									.item
+										img(src= "/images/slider_img02.jpg" alt= "femenino")
+										#slider_caption.carousel-caption
+											h2 Fútbol para todos 
+									.item
+										img(src= "/images/slider_img01.jpg" alt= "local")
+										#slider_caption.carousel-caption
+											h2 Torneos Locales
+		.row
+			#tema1.col-sm-12
+				center
+					img(src= "/images/responsive.jpg" class="img-responsive" alt= "responsive")
+					#font1
+						p Accede a tu perfil y disfruta de la aplicación  en todas partes
+		#tema2.row
+			.col-md-6
+				center
+					img(src= "/images/estadistica.jpg" class="img-responsive" alt= "estadistica")
+			#font2.col-md-6
+				p Historial deportivo  detallado y seguro de nuestros miembros 
+		footer
+			h1 Contacto:
+			span#face.iconM-facebook2
+			span#tuit.iconM-twitter-with-circle
+			span#google.iconM-google-with-circle
+
+				
+
+
+	
+
+		script(src='/javascripts/jquery-3.1.1.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
+				
+
+  
+
+
+

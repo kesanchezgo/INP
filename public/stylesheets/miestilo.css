@@ -1,0 +1,96 @@
+.navbar-brand{
+	
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#logo{
+	color:#fff;
+	font-size: 26px;
+}
+
+#banner{
+	
+	background-image: url("/images/bannerB2.jpg");
+	background-repeat: repeat;
+	height: auto;
+	padding: 20px;
+}
+#banner_lemma{
+	margin-top: 80px;
+	font-size: 3.8em;
+	padding:40px;
+	color:rgba(230, 230, 230,.8);
+	text-align: center;
+	font-weight: bold;
+}
+#btn_banner{
+	border-radius: 20px;
+	border-width: 2px;
+	padding:20px;
+	color:#fff;
+	border-color: #fff;
+	 font: 30% sans-serif;
+	background: inherit;
+	width: 160px;
+
+}
+	#btn_banner:hover{
+		background: rgba(0, 161, 123,.9);
+		border-color: rgba(24, 188, 156,.8);
+	}
+
+#banner_img{
+	padding-top:120px; 
+	align-content: center;
+}
+
+
+
+#tema1{
+	margin-top: 50px;
+	padding: 40px;
+	height: auto;
+}
+#font1{
+	padding: 20px;
+	font-size: 2em;
+}
+#tema2{
+	margin-top: 50px;
+	padding: 40px;
+	height: auto;
+	background: #0A7875;
+
+}
+#font2{
+	text-align: center;
+	color: #fff;
+	font-size: 3em;
+	padding: 40px;
+
+}
+footer{
+	margin-top: 50px;
+	text-align: center;
+	color: rgba(39, 40, 34,.7);
+	margin-bottom: 70px;
+}
+footer h1{
+	font-size: 3em;
+}
+footer span{
+	font-size: 5.4em;
+	margin-top: 15px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+#face:hover{
+	color: #3B5998;
+}
+#tuit:hover{
+	color: #1DA1F2;
+}
+#google:hover{
+	color: #DD5144;
+}
