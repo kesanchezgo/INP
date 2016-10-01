@@ -13,6 +13,7 @@ router.get('/location', ctrlLocations.locationInfo);
 router.get('/location/review/new', ctrlLocations.addReview);
 router.get('/register',	ctrlRegister.register);
 router.get('/team',	ctrlTeam.teamInfo);
+router.get('/team/players', ctrlTeam.players);
 router.get('/profile',	ctrlUser.profile);
 /* Other pages */
 router.get('/about', ctrlOthers.about);

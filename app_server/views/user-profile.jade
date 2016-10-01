@@ -1,5 +1,93 @@
-extends layout
+doctype
+include _includes/mixins
+html(lang='es')
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title= title
+		link(rel='stylesheet', href='/bootstrap/css/flatly-bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/miestilo.css')
+		link(rel='stylesheet', href='/stylesheets/styleM.css')
+	body
+		#header.container
 
-block content
-  #banner.page-header
-  h1 Aqui lo de calla
+			+nav2("Eventos De Futbol", "dropdown_menu", "Cristian S.")
+				+nav_item( "/team/") Equipo
+				+nav_item( "#" ) Resultados
+				+nav_item_dropdown( "#" )( label="Campeonatos" )
+					+nav_item( "#" ) Buscar
+					+nav_item( "#" ) Inscripcion
+					+nav_divider
+					+nav_header EN JUEGO
+					+nav_item( "#" ) Locales
+					+nav_item( "#" ) Nacionales
+
+		.container
+			#usuario_perfil.row
+				.col-md-3
+					#perfil1
+
+						center
+							h3 Cristian S.
+							img#mi_foto(src="/images/foto_perfil.jpg"  class="img-responsive")
+							span.iconM-star.active_icon
+							span.iconM-star.active_icon
+							span.iconM-star
+							span.iconM-star
+							span.iconM-star
+						h4 Nombres:
+							.datos
+								p Cristian Alberto
+						
+						h4 Apellidos:
+							.datos
+								p Calla Bobadilla
+						h4 Fecha Nacimiento:
+							.datos
+								p 11 de Julio de 1983
+						h4 E-mail:
+							.datos
+								p c.calla.bobadilla@gmail.com
+						h4 Teléfono:
+							.datos
+								p 986660712
+						center
+							+button("info", "#")
+								span.iconM-save Modificar
+									
+				.col-md-9
+					#perfil2
+						#accordion.panel-group(role="tablist" aria-multiselectable="true")
+							.panel.panel-default
+
+								#headingOne.panel-heading(role="tab")
+									h4.panel-title
+										a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne") Mis estadisticas
+								#collapseOne(class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne")
+									.panel-body
+										center
+											img(src="/images/grafico.jpg"  class="img-responsive")
+
+							.panel.panel-default
+								#headingTwo.panel-heading(role="tab")
+									h4.panel-title
+										a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo") Mis Equipos
+								#collapseTwo(class="panel-collapse collapse in " role="tabpanel" aria-labelledby="headingTwo")
+									.panel-body
+										center
+											img(src="/images/mis_equipos.jpg"  class="img-responsive")
+
+							.panel.panel-default
+								#headingThree.panel-heading(role="tab")
+									h4.panel-title
+										a(role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"  aria-expanded="true" aria-controls="collapseThree") Mis Campeonatos
+								#collapseThree(class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingThree")
+									.panel-body
+										center
+											img(src="/images/mi_campeonato.jpg"  class="img-responsive")
+											
+						
+						
+		script(src='/javascripts/jquery-3.1.1.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
+				

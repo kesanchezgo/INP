@@ -11,7 +11,7 @@
 
 #banner{
 	
-	background-image: url("/images/bannerB2.jpg");
+	background-image: url("../img/bannerB2.jpg");
 	background-repeat: repeat;
 	height: auto;
 	padding: 20px;
@@ -94,3 +94,44 @@ footer span{
 #google:hover{
 	color: #DD5144;
 }
+
+
+/*PerfilUsuario*/
+
+#usuario_perfil{
+	margin-top:60px;
+	padding:20px;
+
+}
+#foto_nav{
+	max-width: 27px;
+	display: inline;
+	margin-right: 5px;
+}
+#perfil1{
+	padding:20px;
+	border-style: solid;
+	border-color:#3D434B;
+	border-radius: 7px;
+	background: #282828;
+	color:#fff;
+
+	
+}
+.active_icon{
+	color:#FBBB15;
+}
+
+.datos{
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	padding:3px;
+	color:#4687D6;
+}
+#perfil2{
+	padding: 50px;
+	
+}
+
+/****/

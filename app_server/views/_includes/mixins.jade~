@@ -136,6 +136,6 @@ mixin nav2(name, id, player,foto, style)
 
                     ul.nav.navbar-nav.navbar-right
                         li(class ="active"): a(href="#")
-                            img( id = "foto_nav" src = "/images/foto_perfil.jpg" class="img-responsive")
+                            img( id = "foto_nav" src = "img/foto_perfil.jpg" class="img-responsive")
                             = player
                             

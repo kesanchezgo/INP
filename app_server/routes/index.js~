@@ -5,9 +5,10 @@ var ctrlOthers = require('../controllers/others');
 var ctrlRegister =	require('../controllers/register');
 var ctrlTeam =	require('../controllers/team');
 var ctrlUser = require('../controllers/user');
+var ctrlHome = require('../controllers/home');
 
 /* Locations pages */
-router.get('/', ctrlLocations.homelist);
+router.get('/', ctrlHome.home);
 router.get('/location', ctrlLocations.locationInfo);
 router.get('/location/review/new', ctrlLocations.addReview);
 router.get('/register',	ctrlRegister.register);

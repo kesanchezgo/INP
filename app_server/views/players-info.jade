@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  #banner.page-header
+    br
+    section.row#banner.page-header
+      article.col-sm-5.col-md-3(style='background:white; padding:15px;border-radius: 10px;')
+        ul.nav.nav-pills.nav-stacked
+          li
+            a(href='/team/') Equipo
+          li.active
+            a(href='/team/players/') Jugadores
+          li
+            a(href='#') Calendario
+          li
+            a(href='#') Campeonatos
+          li
+            a(href='#') Resultados
+          li
+            a(href='#') Estadisticas
+        hr
+        .panel.panel-success
+          .panel-heading
+            h3.panel-title Proximo Encuentro
+          .panel-body
+            h6.text-center 29 set - Descentralizado - 18:00hrs
+            br
+            .row
+              .col-md-5
+                img(src="/images/melgar.png", alt="melgar", width='90%')
+                h6.text-center FBC Melgar
+              .col-md-2
+                br
+                br
+                br
+                h6.text-center VS
+              .col-md-5
+                br
+                img(src="/images/vallejo.png", alt="melgar", width='110%')
+                h6.text-center Cesar Vallejo
+      article.col-sm-6.col-md-8.col-md-offset-1(style='background:white; padding:15px;border-radius: 10px;')
+        .panel.panel-primary
+          .panel-heading
+            h3.panel-title Jugadores
+          .panel-body
+            br
+            .row
+              .col-md-8.col-md-offset-2
+                .form-group
+                  .input-group
+                    span.input-group-addon B
+                    input.form-control(type='text')
+                    span.input-group-btn
+                      button.btn.btn-success(type='button', placeholder="Buscar...") Buscar
+            hr
+            .row
+              .col-md-10.col-md-offset-1
+                table.table.table-striped.table-hover
+                  thead
+                    tr
+                      th #
+                      th Pos.
+                      th Nombre
+                  tbody
+                    tr.success
+                      td 1
+                      td MVI
+                      td Kevin Sanchez Gomez
+                    tr
+                      td 2
+                      td DC
+                      td Jose Zapana Casani
+                    tr.success
+                      td 3
+                      td PO
+                      td Christian Salazar Bobadilla
+                    tr
+                      td 4
+                      td MCO
+                      td Angel Choquehuanca Peraltilla
+                    tr.success
+                      td 5
+                      td DFC
+                      td Albert Carlos Calla
+            hr

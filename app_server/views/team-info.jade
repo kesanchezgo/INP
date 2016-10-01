@@ -2,4 +2,50 @@ extends layout
 
 block content
   #banner.page-header
-  h1 Aqui lo de bobadilla
+    br
+    section.row#banner.page-header
+      article.col-sm-5.col-md-3(style='background:white; padding:15px;border-radius: 10px;')
+        ul.nav.nav-pills.nav-stacked
+          li.active
+            a(href='/team/') Equipo
+          li
+            a(href='/team/players/') Jugadores
+          li
+            a(href='#') Calendario
+          li
+            a(href='#') Campeonatos
+          li
+            a(href='#') Resultados
+          li
+            a(href='#') Estadisticas
+        hr
+        .panel.panel-success
+          .panel-heading
+            h3.panel-title Proximo Encuentro
+          .panel-body
+            h6.text-center 29 set - Descentralizado - 18:00hrs
+            br
+            .row
+              .col-md-5
+                img(src="/images/melgar.png", alt="melgar", width='90%')
+                h6.text-center FBC Melgar
+              .col-md-2
+                br
+                br
+                br
+                h6.text-center VS
+              .col-md-5
+                br
+                img(src="/images/vallejo.png", alt="melgar", width='110%')
+                h6.text-center Cesar Vallejo
+      article.col-sm-6.col-md-8.col-md-offset-1(style='background:white; padding:15px;border-radius: 10px;')
+        .jumbotron
+          .row
+            .col-md-8
+              h1.text-center Foot Ball Club Melgar
+            .col-md-3.col-md-offset-1
+              img(src="/images/melgar.png", alt="melgar")
+          br
+          p.text-justify El FBC Melgar es un club de fútbol de la ciudad de Arequipa, en el departamento homónimo. Fue fundado en 1915 y es el actual Campeón de la Primera División del Perú
+          p
+            a.btn.btn-primary.btn-lg Leer mas
