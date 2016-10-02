@@ -1,1 +1,1 @@
-Implementación de un Gestor de Clubes con MEAN por alumnos de la Universidad Nacional de San Agustín localizada en Arequipa - Perú.
+Implementación de un Gestor de Clubes con MEAN para el curso de Introducción a Nuevas Plataformas de la Universidad Nacional de San Agustín.
