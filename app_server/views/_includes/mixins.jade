@@ -21,7 +21,7 @@ mixin nav(name, id, style)
                     a.navbar-brand(href="#" alert-dismissable)
                         span#logo.iconM-resistance
                         = name
-                .collapse.navbar-collapse( id=id )
+                .collapse.navbar-collapse(style='height: 1px;', id=id)
                     ul.nav.navbar-nav
                         block
                     form.navbar-form.navbar-right
@@ -127,7 +127,7 @@ mixin nav2(name, id, player,foto, style)
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href="#" alert-dismissable)
+                    a.navbar-brand(href="/" alert-dismissable)
                         span#logo.iconM-resistance
                         = name
                 .collapse.navbar-collapse( id=id )

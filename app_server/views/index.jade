@@ -5,15 +5,15 @@ html(lang='es')
 		meta(charset='utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
 		title= title
+		link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
 		link(rel='stylesheet', href='/bootstrap/css/flatly-bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/miestilo.css')
 		link(rel='stylesheet', href='/stylesheets/styleM.css')
-		link(rel='stylesheet', href='/stylesheets/estiloR.css')
 	body
 		#header.container
 
-			+nav("Eventos De Futbol", "dropdown_menu")
-				+nav_item( "/team/") Equipo
+			+nav("GESTOR", "dropdown_menu")
+				+nav_item( "/team/") Mi Equipo
 				+nav_item( "#" ) Resultados
 				+nav_item_dropdown( "#" )( label="Campeonatos" )
 					+nav_item( "#" ) Buscar
