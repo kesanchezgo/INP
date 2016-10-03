@@ -1,0 +1,94 @@
+extends layout
+
+block content
+  .header-title
+     .container
+        h1= title
+        p System Ged
+  .main-container
+     .row
+       .side-left.col-md-2
+            h3.text-justify menu
+            .sidebar-nav
+                ul.nav.navbar-nav2
+                    li.active
+                        a(href='/admin') Home
+                    li 
+                        a(href='/admin') Jugadores 
+                    li 
+                        a(href='/admin') Equipos 
+                    li 
+                        a(href='/admin') Fixture
+       .post.col-md-7
+         .router
+           ol.breadcrumb
+             li
+               a(href='/') Inicio
+             li.active Admin
+         .data
+            span
+              h1 Lista de Administradores
+              button.btn.btn-primary.btn-table-plus(type='button')
+               span.glyphicon.glyphicon-plus Agregar
+         table.table.table-responsive.table-admin
+           thead
+             tr
+               th Nro
+               th Firtr Name
+               th Last Name
+               th Age
+               th Adressee
+               th Email
+               th update
+               th remove
+           tbody.rows-admins
+             tr
+               td 1
+               td Ana
+               td Ramirez
+               td 23
+               td Arequipa
+               td anita.ant@gmail.com
+               td
+                 a(href='#')
+                   img.image-update(src='/images/update.png' style="width:20px; height:20px")
+               td 
+                 a(href='#')
+                   img(src='/images/delete.png' style="width:20px; height:20px")
+             tr
+               td 2
+               td antony
+               td guerra
+               td 23
+               td Arequipa
+               td tony.ptg@gmail.com
+               td 
+                 a(href='#')
+                   img.image-update(src='/images/update.png' style="width:20px; height:20px")
+               td 
+                 a(href='#')
+                   img(src='/images/delete.png' style="width:20px; height:20px")
+             tr
+               td 3
+               td JeanFranco
+               td Vera
+               td 24
+               td Lima
+               td franco.vera@gmail.com
+               td
+                 a(href='#')
+                   img.image-update(src='/images/update.png' style="width:20px; height:20px")
+               td 
+                 a(href='#')
+                   img(src='/images/delete.png' style="width:20px; height:20px")
+       .col-md-3
+           .plus-info
+             h1 Fecha
+
+
+
+
+
+           
+
+

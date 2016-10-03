@@ -1,0 +1,109 @@
+doctype html
+html(lang="es")
+head
+  title Resultados
+  meta(charset="utf-8")
+  meta(name="viewport",content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0")
+  meta(http-equiv="Content-Type",content="text/html; charset=utf-8" )
+  link(rel='stylesheet', href='/bootstrap/css/flatly-bootstrap.min.css')
+  link(rel='stylesheet', href='/stylesheets/estiloR.css')
+
+body
+  header Resultados
+  nav 
+    ul#menu
+      li 
+        a(href="#") Eventos de Futbol
+      li 
+        a(href="#") Equipos
+      li
+        a(href="#") Resultados
+      li
+        a(href="#") Campeonatos
+    br
+    .container
+       br
+       .row
+           .col-md-8
+                .panel panel-default
+                    .panel-heading
+                       h1.panel-title 
+                        img(src="/images/premier.png",alt="premier", width="40%")
+                    table(align="center",class="table table-bordered")    
+                       th Fecha
+                       th Local
+                       th Marcador
+                       th Visita
+
+                       tr
+                         td 01/10/16
+                         td Everton
+                            img(class="logo_l",src="/images/everton.png",alt="everton")
+                         td 1-1
+                         td 
+                            img(class="logo_v",src="/images/palace.png",alt="palace")
+                            p Crytal Palace
+
+                       tr
+                         td 01/10/16
+                         td Swansea 
+                            img(class="logo_l",src="/images/swan.png",alt="swan")
+                         td 1-1
+                         td 
+                            img(class="logo_v",src="/images/liverpool.png",alt="liverpool")
+                            p Liverpool
+
+                       tr
+                          td 01/10/16
+                          td Sunderland
+                             img.logo_l(src="/images/sunder.png",alt="sunder")
+                          td 1-1
+                          td 
+                             img.logo_v(src="/images/west.png",alt="west")
+                             p West Brom
+
+                       tr
+                          td 01/10/16
+                          td Watford
+                             img.logo_l(src="/images/watford.png",alt="watford")
+                          td 2-2
+                          td 
+                             img.logo_v(src="/images/bour.png", alt="Bournemouth")
+                             p Bournemouth
+
+                       tr
+                          td 01/10/16
+                          td West Ham
+                             img.logo_l(src="/images/wham.png",alt="WestHam")
+                          td 1-1
+                          td 
+                             img.logo_v(src="/images/mid.jpg",alt="Middlesbrough")
+                             p Middlesbrough
+
+                       tr
+                          td 02/10/16
+                          td M. United 
+                             img.logo_l(src="/images/united.png",alt="Manchester")
+                          td 1-1
+                          td 
+                             img.logo_v(src="/images/stoke.png",alt="Stoke")
+                             p  Stoke City 
+         
+            .row
+                .col-md-4
+                    label Seleccione Un Torneo
+                    br
+                    select.form-control
+                        optgroup(label="Europa")
+                            option Premier
+                            option Bundesliga
+                            option Liga Italiana
+                            option España
+                        optgroup(label="Sudamrica")
+                            option Sudamericana 
+                            option Eliminatorias
+                            option Libertadores
+
+
+  script(src='/javascripts/jquery-3.1.1.min.js')
+  script(src='/bootstrap/js/bootstrap.min.js')

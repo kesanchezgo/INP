@@ -6,7 +6,7 @@ var ctrlRegister =	require('../controllers/register');
 var ctrlTeam =	require('../controllers/team');
 var ctrlUser = require('../controllers/user');
 var ctrlHome = require('../controllers/home');
-
+var ctrlAdmin = require('../controllers/admin');
 /* Locations pages */
 router.get('/', ctrlHome.home);
 router.get('/location', ctrlLocations.locationInfo);
@@ -14,8 +14,10 @@ router.get('/location/review/new', ctrlLocations.addReview);
 router.get('/register',	ctrlRegister.register);
 router.get('/team',	ctrlTeam.teamInfo);
 router.get('/team/players', ctrlTeam.players);
+router.get('/team/scores', ctrlTeam.scores);
 router.get('/profile',	ctrlUser.profile);
 /* Other pages */
 router.get('/about', ctrlOthers.about);
+router.get('/admin', ctrlAdmin.admin);
 
 module.exports = router;

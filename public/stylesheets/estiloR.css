@@ -1,0 +1,218 @@
+header {
+    display:block;
+    background:#0A0A2A url('') no-repeat fixed;
+    width:88%;
+    height:auto;
+    margin:0 auto;
+    padding-top:29px;
+    padding-bottom:29px;
+    font-size:48px;
+    color:#FFF;
+    text-align:center;
+    border-radius:10px 10px 10px 10px;
+   }
+body .container{
+	background-color: #1D8F66;
+}
+
+body nav {
+    display:block;
+    background:#0A2229 url('') no-repeat fixed;
+    width:88%;
+    height:28px;
+    margin:0 auto;
+    margin-top:5px;
+    font-size:19px;
+    color:#FFF;
+    text-align:center;
+    border-radius:10px 10px 10px 10px;
+   }
+   
+   body nav ul#menu {
+    width:100%;
+    height:auto;
+   }
+   body nav ul#menu a {
+    text-decoration:none;
+    color:#FFF;
+    transition:all ease-in .3s;
+   }
+   body nav ul#menu a:hover {
+    color:#2d3035;
+   }
+  
+   body nav ul#menu li {
+    float:left;
+    margin: 0% 2%;
+    margin-top:2px;
+    list-style:none;
+    transition:all ease-in-out .7s;
+    padding-left:7px;
+    padding-right:7px;
+    border-radius:10px 10px 10px 10px; 
+  }
+   body nav ul#menu li:hover {
+    background:#EEE;
+    color:#2d3035;
+    border-radius:10px 10px 10px 10px; 
+   }
+   body nav ul#menu ul {
+    background:rgba(0, 0, 0, 0.8) url('') no-repeat fixed;
+    display:none;
+    position:absolute;
+    width:18%;
+    padding: 5px 5px 5px 18px;
+    margin: 0;
+    margin-top:2px;
+    border-radius:0px 0px 10px 10px;
+    
+   }
+
+   body nav ul#menu ul li {
+    width:89%;
+    margin:2% 0%;
+    margin-top:2px;
+    margin-bottom:0px;
+   }
+   body nav ul#menu li:hover ul {
+    display:block;
+   }
+
+table {
+  border:1px black solid;
+  border-radius:5px;
+  min-width:400px;
+  font-family: Helvetica,Arial;
+  text-align: center;
+}
+
+table, table td, table tr {
+	padding:0px;
+	border-spacing: 0px;
+}
+
+table td {
+	padding:6px;
+}
+
+table tr:first-child td:first-child {
+	border-radius:5px 0px 0px 0px;
+}
+
+table tr:first-child td:last-child {
+	border-radius:0px 5px 0px 0px;
+}
+
+table tr:last-child td:first-child {
+	border-radius:0px 0px 0px 5px;
+}
+
+table tr:last-child td:last-child {
+	border-radius:0px 0px 5px 0px;
+}
+
+table td:not(:last-child) {
+	border-right:1px #666 solid;
+}
+
+
+table tr:nth-child(2n) {
+	background: #87CEEB;
+}
+
+table tr:nth-child(2n+1){
+	background: #ADD8E6;
+}
+
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+	background:#070707;
+}
+table:not(.header) tr {
+	text-align: center;
+}
+
+table.header tr:first-child {
+	font-weight: bold;
+	color:#fff;
+	background-color: #444;
+	border-bottom:1px #000 solid;
+}
+
+table.header tr:nth-child(n+2) {
+	text-align: center;
+}
+
+table, table td, table tr {
+ padding:0px;
+ border-spacing: 0px;
+}
+ 
+table td {
+ padding:6px;
+}
+
+table th{
+  text-align: center;
+}
+ 
+table tr:first-child td:first-child {
+ border-radius:5px 0px 0px 0px;
+}
+ 
+table tr:first-child td:last-child {
+ border-radius:0px 5px 0px 0px;
+}
+ 
+table tr:last-child td:first-child {
+ border-radius:0px 0px 0px 5px;
+}
+ 
+table tr:last-child td:last-child {
+ border-radius:0px 0px 5px 0px;
+}
+ 
+table td:not(:last-child) {
+ border-right:1px #666 solid;
+} 
+ 
+table tr:nth-child(2n) {
+ background: #87CEEB;
+}
+ 
+table tr:nth-child(2n+1){
+ background: #ADD8E6;
+}
+ 
+table.header tr:not(:first-child):hover, table:not(.header) tr:hover {
+ background:#6D6868;
+}
+ 
+table:not(.header) tr {
+ text-align: center;
+}
+ 
+table.header tr:first-child {
+ font-weight: bold;
+ color:#fff;
+ background-color: #444;
+ border-bottom:1px #000 solid;
+}
+ 
+table.header tr:nth-child(n+2) {
+ text-align: center;
+}
+
+.logo_l{
+	width: 40px;
+	height: auto;
+	border: 0;
+	float: right;
+}
+
+.logo_v{
+	width: 40px;
+	height: auto;
+	border : 0;
+	float: left;
+}
+

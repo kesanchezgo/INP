@@ -1,0 +1,90 @@
+/* Body admin */
+
+/*header admin*/
+.header-title h1{ 
+	color: #428BCA;
+
+}
+.header-title p{ 
+	color: black;
+
+}
+.header-title{
+	/*border-bottom: 1px solid #428BCA;*/
+}
+
+/*router admib */
+.breadcrumb{
+	background-color: #F5F5F5;
+
+}
+.breadcrumb li a{
+	color: #428BCA;
+	
+}
+.breadcrumb .active{
+	color: black;
+	
+}
+
+/*menu*/
+.sidebar-nav{
+	background-color: #428BCA;
+}
+.sidebar-nav ul li{
+	border-bottom: 2px solid white; 
+	color: white;
+}
+.sidebar-nav ul li a{
+  color:white;
+
+}
+.sidebar-nav ul li a:hover{
+  background-color: #404040;
+  color: white;
+
+}
+.sidebar-nav ul li.active{
+  color:white;
+  background-color: black;
+
+}
+/*table*/
+
+.rows-admins tr:hover{
+  background:#BBD8F0;
+ 
+}
+
+.table-admin thead tr th{
+  border-bottom: 2px solid black;
+ 
+}
+
+.table-admin tbody tr td{
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+ 
+}
+
+.table-admin{
+	margin:15px 0px 0px 0px;
+}
+
+
+/*button agregar*/
+.btn-table-plus{
+	background-color: #428BCA;
+	color: #fff;
+	border: 1px solid #428BCA;
+}
+
+.btn-table-plus:hover{
+	background-color: #404040;
+	color: #fff;
+}
+
+/*button update*/
+.image-update{
+ margin-left:10px;
+}

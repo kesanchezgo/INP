@@ -6,7 +6,6 @@ html
     link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
     link(rel='stylesheet', href='/bootstrap/css/flatly-bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/style_admin.css')
   body
    .navbar.navbar-default.navbar-fixed-top
       .container
