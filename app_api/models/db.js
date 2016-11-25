@@ -40,3 +40,7 @@ process.on('SIGTERM', function() {
 
 require('./locations');
 require('./users');
+require('./equipos');
+require('./encuentros');
+
+require('./torneos');
