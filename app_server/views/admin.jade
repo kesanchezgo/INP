@@ -2,88 +2,114 @@ extends layout
 
 block content
   .header-title
-     .container
-        h1= title
-        p System Ged
+    .container
+      h1= title
+      p System Ged
   .main-container
-     .row
-       .side-left.col-md-2
-            h3.text-justify menu
-            .sidebar-nav
-                ul.nav.navbar-nav2
-                    li.active
-                        a(href='/admin') Home
-                    li 
-                        a(href='/admin') Jugadores 
-                    li 
-                        a(href='/admin') Equipos 
-                    li 
-                        a(href='/admin') Fixture
-       .post.col-md-7
-         .router
-           ol.breadcrumb
-             li
-               a(href='/') Inicio
-             li.active Admin
-         .data
-            span
-              h1 Lista de Administradores
-              button.btn.btn-primary.btn-table-plus(type='button')
-               span.glyphicon.glyphicon-plus Agregar
-         table.table.table-responsive.table-admin
-           thead
-             tr
-               th Nro
-               th Firtr Name
-               th Last Name
-               th Age
-               th Adressee
-               th Email
-               th update
-               th remove
-           tbody.rows-admins
-             tr
-               td 1
-               td Ana
-               td Ramirez
-               td 23
-               td Arequipa
-               td anita.ant@gmail.com
-               td
-                 a(href='#')
-                   img.image-update(src='/images/update.png' style="width:20px; height:20px")
-               td 
-                 a(href='#')
-                   img(src='/images/delete.png' style="width:20px; height:20px")
-             tr
-               td 2
-               td antony
-               td guerra
-               td 23
-               td Arequipa
-               td tony.ptg@gmail.com
-               td 
-                 a(href='#')
-                   img.image-update(src='/images/update.png' style="width:20px; height:20px")
-               td 
-                 a(href='#')
-                   img(src='/images/delete.png' style="width:20px; height:20px")
-             tr
-               td 3
-               td JeanFranco
-               td Vera
-               td 24
-               td Lima
-               td franco.vera@gmail.com
-               td
-                 a(href='#')
-                   img.image-update(src='/images/update.png' style="width:20px; height:20px")
-               td 
-                 a(href='#')
-                   img(src='/images/delete.png' style="width:20px; height:20px")
-       .col-md-3
-           .plus-info
-             h1 Fecha
+    .row
+      .side-left.col-md-2
+        h3.text-justify menu
+          .sidebar-nav
+            ul.nav.navbar-nav2
+              li
+                a.tablinks(href="#", onclick="openSection(event, 'home')") Home
+              li 
+                a.tablinks(href="#", onclick="openSection(event, 'players')") Jugadores 
+              li 
+                a.tablinks(href="#", onclick="openSection(event, 'teams')") Equipos 
+              li 
+                a.tablinks(href="") Fixture
+              li
+                a(href='/admin/user/listUser') Users
+      .post.col-md-7
+        #home.tabcontent
+          h1= title
+          p Total: #{amount}
+          table.table.table-responsive.table-admin
+            thead
+              tr
+                th Nro
+                th First Name
+                th Last Name
+                th Edad
+                th Ciudad
+                th Email
+                th Update
+                th Remove
+            tbody.row-admins
+              if usuarios
+               each usuario in usuarios
+                tr
+                  td 1
+                  td= usuario.name
+                  td= usuario.lastname
+                  td 23
+                  td Arequipa
+                  td= usuario.email                  
+                  td 
+                    a(href='#myModal', onclick="getDataUser(event, '#{usuario._id}')" data-toggle='modal')
+                      img.image-update(src='/images/update.png' style="width:20px; height:20px")                      
+                  td
+                    a(href='#myModal2', onclick="getAlertDelete('#{usuario.name}', '#{usuario._id}')" data-toggle='modal')                    
+                      img(src='/images/delete.png' style="width:20px; height:20px")
+                      
+
+        #players.tabcontent
+          h1 players
+        #teams.tabcontent
+          h1 teams           
+
+      .col-md-3
+       .plus-info
+          h1 Fecha
+  //modal para actualizar data
+  .row
+    .col-md-12#myModal.modal.fade(role="dialog", tabindex="-1")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+            h4.modal-title Update User            
+          .modal-body   
+              br
+              input#id.form-control(type='hidden'  , name='id', value="", required)
+              br
+              input#name.form-control(type='text' placeholder='Nombres Completos' , name='name', required)
+              br
+              input#lastname.form-control(type='text', placeholder='Apellidos Completos' , name='lastname', required)
+              br
+              input#email.form-control(type='email', placeholder='Correo electrónico' , name='email', required)
+              br
+              input#dni.form-control(type='text', placeholder='Número de DNI' , name='dni', required)
+              br
+              input#phone.form-control(type='tel', placeholder='Telefono' , name='phone', required)
+              br
+              select#sex.form-control(name='sex', style='padding-left: 6px;')
+                option(value='0') Selecciona tu género
+                option(value='femenino') Femenino
+                option(value='masculino') Masculino
+              br
+            
+          .modal-footer
+            button.btn.btn-default(type="button", data-dismiss="modal") Close
+            button.btn.btn-primary(type="button", onclick="updateOneUser()") Save Changes  
+
+  .row
+    .col-md-12#myModal2.modal.fade(role="dialog", tabindex="-1")
+      .modal-dialog(role="document")
+        .modal-content
+          .modal-header
+            button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+            h4.modal-title Delete User            
+          .modal-body
+            h4#d_name
+            input#d_id.form-control(type='hidden'  , name='d_id', value="")            
+            
+          .modal-footer
+            button.btn.btn-default(type="button", data-dismiss="modal") Cancel
+            button.btn.btn-primary(type="button", onclick="deleteOneUser()") Delete
+
+    
 
 
 

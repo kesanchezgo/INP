@@ -1,6 +1,8 @@
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
+
 var dbURI = 'mongodb://localhost/Loc8r';
+
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGOLAB_URI;
 }
@@ -40,7 +42,7 @@ process.on('SIGTERM', function() {
 
 require('./locations');
 require('./users');
-require('./equipos');
-require('./encuentros');
+//require('./equipos');
+//require('./encuentros');
 
-require('./torneos');
+//require('./torneos');

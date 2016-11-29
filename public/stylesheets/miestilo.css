@@ -1,3 +1,18 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  overflow: auto;
+  height: 100%;
+}
+
+/* unset bs3 setting */
+#myModal {
+ overflow: auto; 
+}
+
+
 .navbar-brand{
 	
 	font-size: 20px;

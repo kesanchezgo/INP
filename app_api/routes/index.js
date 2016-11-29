@@ -1,18 +1,18 @@
 var express = require('express');
 var router = express.Router();
-var ctrlLocations = require('../controllers/locations');
-var ctrlReviews = require('../controllers/reviews');
+var ctrlRegister = require('../controllers/register');
 
+// API para Usuario
+//Registro usuario
+router.post('/registerUser', ctrlRegister.userCreate);
+//lista de usuarios
+router.get('/user/listUser', ctrlRegister.listUser);
+//eliminar Usurio
+router.delete('/admin/:userid', ctrlRegister.deleteOneUser);
+//update User
+router.put('/admin/:userid', ctrlRegister.updateOneUser);
+router.get('/admin/:userid', ctrlRegister.readOneUser);
+//perfil de usuario
+router.get('/profile/user/:userid', ctrlRegister.getOneUser);
 
-router.get('/locations', ctrlLocations.locationsListByDistance);
-router.post('/locations', ctrlLocations.locationsCreate);
-router.get('/locations/:locationid', ctrlLocations.locationsReadOne);
-router.put('/locations/:locationid', ctrlLocations.locationsUpdateOne);
-router.delete('/locations/:locationid', ctrlLocations.locationsDeleteOne);
-
-// reviews
-router.post('/locations/:locationid/reviews', ctrlReviews.reviewsCreate);
-router.get('/locations/:locationid/reviews/:reviewid', ctrlReviews.reviewsReadOne);
-router.put('/locations/:locationid/reviews/:reviewid', ctrlReviews.reviewsUpdateOne);
-//router.delete('/locations/:locationid/reviews/:reviewid', ctrlReviews.reviewsDeleteOne);
 module.exports = router;

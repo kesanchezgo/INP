@@ -1,8 +1,7 @@
 var mongoose = require( 'mongoose' );
 
 
-
-var tipoSchema = new mongoose.Schema({
+/*var tipoSchema = new mongoose.Schema({
   nombreTipo: {type: String, required: true},
   descripcion: {type: String, required:true}
 });
@@ -30,26 +29,25 @@ var adminSchema = new mongoose.Schema({
 	descripcion: String     //general-equipo
 
 });
-
+*/
 //USER
-var UserSchema = new mongoose.Schema({
-  nombres: {type: String, required: true},
-  apellidos: {type: String, required:true},
-  mail: {type: String, required:true},
-  contrasenia: {type: String, required:true},
-  genero: {type: String, required:true},
-  telefono:String,
-  nacDia:Number,
-  nacMes:Number,
-  nacAnio:Number,
-  dni:{type: String, required: true},
-  tipos: [tipoSchema], //en realidad es [string]  jugador-arbitro admin
-  jugador: jugadorSchema,
+var userSchema = new mongoose.Schema({
+  name: {type: String, required: true},
+  lastname: {type: String, required:true},
+  email: {type: String, required:true},
+  password: {type: String, required:true},
+  sex: {type: String, required:true},
+  phone:String,
+  //nacDia:Number,
+  //nacMes:Number,
+  //nacAnio:Number,
+  dni:{type: String, required: true}
+  //type: [tipoSchema], //en realidad es [string]  jugador-arbitro admin
+  //jugador: jugadorSchema,
 
-  arbitro: arbitroSchema,
-  admin: adminSchema
+  //arbitro: arbitroSchema,
+  //admin: adminSchema
 });
-
+console.log("creado schema!");
  
-mongoose.model('User', UserSchema);
-module.exports = mongoose.model('User', UserSchema); 
+mongoose.model('user', userSchema);

@@ -12,7 +12,7 @@ html(lang='es')
 	body
 		#header.container
 
-			+nav2("GESTOR", "dropdown_menu", "Cristian S.")
+			+nav2("GESTOR", "dropdown_menu", name)
 				+nav_item( "/team/") Mi Equipo
 				+nav_item( "#" ) Resultados
 				+nav_item_dropdown( "#" )( label="Campeonatos" )
@@ -29,7 +29,7 @@ html(lang='es')
 					#perfil1
 
 						center
-							h3 Cristian S.
+							h3= name
 							img#mi_foto(src="/images/foto_perfil.jpg"  class="img-responsive")
 							span.iconM-star.active_icon
 							span.iconM-star.active_icon
@@ -38,20 +38,20 @@ html(lang='es')
 							span.iconM-star
 						h4 Nombres:
 							.datos
-								p Cristian Alberto
+								p= name
 						
 						h4 Apellidos:
 							.datos
-								p Calla Bobadilla
+								p= lastname
 						h4 Fecha Nacimiento:
 							.datos
 								p 11 de Julio de 1983
 						h4 E-mail:
 							.datos
-								p c.calla.bobadilla@gmail.com
+								p= email
 						h4 Teléfono:
 							.datos
-								p 986660712
+								p= phone
 						center
 							+button("info", "#")
 								span.iconM-save Modificar
