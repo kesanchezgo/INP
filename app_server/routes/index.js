@@ -24,4 +24,9 @@ router.get('/admin', ctrlAdmin.admin);
 router.get('/admin/:userid', ctrlAdmin.readOneUser);
 router.get('/admin/user/listUser', ctrlAdmin.listUsers);
 
+/* load age's */
+
+router.get('/page', function(req, res){
+	res.render('content');
+});
 module.exports = router;

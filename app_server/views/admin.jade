@@ -7,24 +7,33 @@ block content
       p System Ged
   .main-container
     .row
-      .side-left.col-md-2
+      .col-md-2
         h3.text-justify menu
           .sidebar-nav
             ul.nav.navbar-nav2
               li
-                a.tablinks(href="#", onclick="openSection(event, 'home')") Home
+                a.tablinks(href="#", onclick="openSection(event, 'home')" ) Home
               li 
-                a.tablinks(href="#", onclick="openSection(event, 'players')") Jugadores 
+                a.tablinks(href="#", onclick="openSection(event, 'players')" ) Jugadores 
               li 
-                a.tablinks(href="#", onclick="openSection(event, 'teams')") Equipos 
+                a.tablinks(href="#", onclick="openSection(event, 'teams')" ) Equipos 
               li 
                 a.tablinks(href="") Fixture
               li
-                a(href='/admin/user/listUser') Users
+                a(href="#" , onclick="openSection(event, 'user')" ) Users
       .post.col-md-7
         #home.tabcontent
           h1= title
-          p Total: #{amount}
+          p Total: #{amount} 
+              
+                      
+
+        #players.tabcontent
+          h1 players
+        #teams.tabcontent
+          h1 teams  
+
+        #user.tabcontent
           table.table.table-responsive.table-admin
             thead
               tr
@@ -36,79 +45,15 @@ block content
                 th Email
                 th Update
                 th Remove
-            tbody.row-admins
-              if usuarios
-               each usuario in usuarios
-                tr
-                  td 1
-                  td= usuario.name
-                  td= usuario.lastname
-                  td 23
-                  td Arequipa
-                  td= usuario.email                  
-                  td 
-                    a(href='#myModal', onclick="getDataUser(event, '#{usuario._id}')" data-toggle='modal')
-                      img.image-update(src='/images/update.png' style="width:20px; height:20px")                      
-                  td
-                    a(href='#myModal2', onclick="getAlertDelete('#{usuario.name}', '#{usuario._id}')" data-toggle='modal')                    
-                      img(src='/images/delete.png' style="width:20px; height:20px")
-                      
+            tbody#body_user.row-admins
 
-        #players.tabcontent
-          h1 players
-        #teams.tabcontent
-          h1 teams           
 
       .col-md-3
        .plus-info
           h1 Fecha
-  //modal para actualizar data
-  .row
-    .col-md-12#myModal.modal.fade(role="dialog", tabindex="-1")
-      .modal-dialog(role="document")
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
-            h4.modal-title Update User            
-          .modal-body   
-              br
-              input#id.form-control(type='hidden'  , name='id', value="", required)
-              br
-              input#name.form-control(type='text' placeholder='Nombres Completos' , name='name', required)
-              br
-              input#lastname.form-control(type='text', placeholder='Apellidos Completos' , name='lastname', required)
-              br
-              input#email.form-control(type='email', placeholder='Correo electrónico' , name='email', required)
-              br
-              input#dni.form-control(type='text', placeholder='Número de DNI' , name='dni', required)
-              br
-              input#phone.form-control(type='tel', placeholder='Telefono' , name='phone', required)
-              br
-              select#sex.form-control(name='sex', style='padding-left: 6px;')
-                option(value='0') Selecciona tu género
-                option(value='femenino') Femenino
-                option(value='masculino') Masculino
-              br
-            
-          .modal-footer
-            button.btn.btn-default(type="button", data-dismiss="modal") Close
-            button.btn.btn-primary(type="button", onclick="updateOneUser()") Save Changes  
-
-  .row
-    .col-md-12#myModal2.modal.fade(role="dialog", tabindex="-1")
-      .modal-dialog(role="document")
-        .modal-content
-          .modal-header
-            button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
-            h4.modal-title Delete User            
-          .modal-body
-            h4#d_name
-            input#d_id.form-control(type='hidden'  , name='d_id', value="")            
-            
-          .modal-footer
-            button.btn.btn-default(type="button", data-dismiss="modal") Cancel
-            button.btn.btn-primary(type="button", onclick="deleteOneUser()") Delete
-
+        #caja
+   
+  
     
 
 

@@ -1,0 +1,16 @@
+
+if usuarios
+ each usuario in usuarios
+  tr
+    td 1
+    td= usuario.name
+    td= usuario.lastname
+    td 23
+    td Arequipa
+    td= usuario.email                  
+    td 
+      a(href='#myModal', onclick="getDataUser(event, '#{usuario._id}')" data-toggle='modal')
+        img.image-update(src='/images/update.png' style="width:20px; height:20px")                      
+    td
+      a(href='#myModal2', onclick="getAlertDelete('#{usuario.name}', '#{usuario._id}')" data-toggle='modal')                    
+        img(src='/images/delete.png' style="width:20px; height:20px")

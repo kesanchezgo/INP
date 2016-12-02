@@ -29,12 +29,23 @@ function openSection(evt, cityName){
    }
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += "active";
+
+  var item = document.getElementById(cityName).getAttribute( 'id' );;
+  //alert("item: "+item);
+
+
+
+  if(item == "user") {$("#body_user").load('/admin/user/listUser');}
 }
 
 //calling ajax for method DELETE
 function getAlertDelete(name, idUser){  
-  $('#d_name').text("Esta seguro de Eliminar a "+name+"? ");  
+   //console.log("CARGANDO CONTENT ....")
+  $('#d_name').text("Esta seguro de Eliminar a "+name+"? "); 
+ 
   $('#d_id').val(idUser); 
+  //console.log("CARGANDO CONTENT ....")
+  
 }
 function deleteOneUser(evt, idUser){ 
    var idUser = $('#d_id').val(); 
@@ -43,10 +54,11 @@ function deleteOneUser(evt, idUser){
      type: 'DELETE',
       success: function(result){
          if(result.success){
-            alert("Exito al Eliminar");           
+            alert("Exito al Eliminar");   
+            $("#body_user").load('/admin/user/listUser');        
          }
          else {
-           alert("Ocurrio un ERROR ");
+           //alert("Ocurrio un ERROR ");
          }
          $('#myModal2').modal('hide');
 
@@ -92,7 +104,8 @@ function updateOneUser(){
      
       success: function(result){
          if(result.success){
-            alert("Exito "+ result.data.name);           
+            //alert("Exito "+ result.data.name);   
+            $("#body_user").load('/admin/user/listUser');        
          }
          else {
            alert("ocurrio algun ERROR, vuelva a intentarlo ");

@@ -1,4 +1,5 @@
 doctype html
+include _includes/mixins
 html
   head
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
@@ -8,7 +9,7 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/style_admin.css')
   body
-   .navbar.navbar-default.navbar-fixed-top
+    .navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href='/') GESTOR
@@ -24,7 +25,8 @@ html
             li
               a(href='/team/') Mi Equipo
             li
-              a(href='#') Perfil      
+              a(href='#modals' data-toggle='modal') Perfil
+                  
     .container
       block content
 
@@ -32,8 +34,49 @@ html
         .row
           .col-xs-12
             small &copy; Gestor de Clubes 2016
-
-   
+    
+   .col-md-12#myModal.modal.fade(role="dialog", tabindex="-1")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+          h4.modal-title Update User            
+        .modal-body   
+          br
+          input#id.form-control(type='hidden'  , name='id', value="", required)
+          br
+          input#name.form-control(type='text' placeholder='Nombres Completos' , name='name', required)
+          br
+          input#lastname.form-control(type='text', placeholder='Apellidos Completos' , name='lastname', required)
+          br
+          input#email.form-control(type='email', placeholder='Correo electrónico' , name='email', required)
+          br
+          input#dni.form-control(type='text', placeholder='Número de DNI' , name='dni', required)
+          br
+          input#phone.form-control(type='tel', placeholder='Telefono' , name='phone', required)
+          br
+          select#sex.form-control(name='sex', style='padding-left: 6px;')
+            option(value='0') Selecciona tu género
+            option(value='femenino') Femenino
+            option(value='masculino') Masculino
+          br
+        .modal-footer
+          button.btn.btn-default(type="button", data-dismiss="modal") Close
+          button.btn.btn-primary(type="button", onclick="updateOneUser()") Save Changes  
+  
+  .col-md-12#myModal2.modal.fade(role="dialog", tabindex="-1")
+    .modal-dialog(role="document")
+      .modal-content
+        .modal-header
+          button.close(type="button", data-dismiss="modal", aria-hidden="true") &times;
+          h4.modal-title Delete User            
+        .modal-body
+          h4#d_name
+          input#d_id.form-control(type='hidden'  , name='d_id', value="")            
+          
+        .modal-footer
+          button.btn.btn-default(type="button", data-dismiss="modal") Cancel
+          button.btn.btn-primary(type="button", onclick="deleteOneUser()") Delete
     
     script(src='/javascripts/jquery-3.1.1.min.js')
     script(src='/javascripts/jquery-3.1.1.min.js')

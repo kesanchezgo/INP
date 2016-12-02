@@ -25,7 +25,7 @@ module.exports.listUsers = function(req, res){
 	 function(err, response, body){
 	 	var data;
 	 	data = body;	 	
-	 	res.render('admin',{
+	 	res.render('content',{
 	 		title: "Lista de Usuarios",
 	 		usuarios: data,
 	 		amount: body.length

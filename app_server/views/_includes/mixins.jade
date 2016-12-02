@@ -138,4 +138,24 @@ mixin nav2(name, id, player,foto, style)
                         li(class ="active"): a(href="#")
                             img( id = "foto_nav" src = "/images/foto_perfil.jpg" class="img-responsive")
                             = player
-                            
+
+
+
+mixin modal(title,id)
+    .modal.fade(id="#{id}",tabindex="-1",role="dialog",aria-labelledby="#{id}Label" aria-hidden="true")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type="button",data-dismiss="modal")
+                    span(aria-hidden="true") &times;
+                    span.sr-only Close
+                    h4.modal-title(id="#{id}Label")= title
+                .modal-body
+                    h1 hahah
+                .modal-footer
+                    button.btn.btn-default(type="button",data-dismiss="modal") Close
+
+
+
+
+

@@ -21,7 +21,7 @@ mixin nav(name, id, style)
                     a.navbar-brand(href="#" alert-dismissable)
                         span#logo.iconM-resistance
                         = name
-                .collapse.navbar-collapse( id=id )
+                .collapse.navbar-collapse(style='height: 1px;', id=id)
                     ul.nav.navbar-nav
                         block
                     form.navbar-form.navbar-right
@@ -127,7 +127,7 @@ mixin nav2(name, id, player,foto, style)
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href="#" alert-dismissable)
+                    a.navbar-brand(href="/" alert-dismissable)
                         span#logo.iconM-resistance
                         = name
                 .collapse.navbar-collapse( id=id )
@@ -136,6 +136,26 @@ mixin nav2(name, id, player,foto, style)
 
                     ul.nav.navbar-nav.navbar-right
                         li(class ="active"): a(href="#")
-                            img( id = "foto_nav" src = "img/foto_perfil.jpg" class="img-responsive")
+                            img( id = "foto_nav" src = "/images/foto_perfil.jpg" class="img-responsive")
                             = player
-                            
+
+
+
+mixin modal(title,id)
+    .modal.fade(id="#{id}",tabindex="-1",role="dialog",aria-labelledby="#{id}Label" aria-hidden="true")
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    button.close(type="button",data-dismiss="modal")
+                    span(aria-hidden="true") &times;
+                    span.sr-only Close
+                    h4.modal-title(id="#{id}Label")= title
+                .modal-body
+                    h1 hahah
+                .modal-footer
+                    button.btn.btn-default(type="button",data-dismiss="modal") Close
+
+
+
+
+
