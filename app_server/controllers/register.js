@@ -15,6 +15,8 @@ module.exports.register = function(req, res)  {
 module.exports.doRegisterUser = function(req, res){
  
   var requestOptions, path, postdata;
+  
+  var sexo = (req.body.sex == "Masculino") ? 1:0;
 
   path= '/api/registerUser'; 
   postdata = {
@@ -24,7 +26,11 @@ module.exports.doRegisterUser = function(req, res){
     password: req.body.password,
     dni: req.body.dni,
     phone: req.body.phone,
-    sex : req.body.sex
+    sex : sexo,
+    type : req.body.type,
+    dia : req.body.dia,
+    mes : req.body.mes,
+    anio :req.body.anio
   };
    
   
@@ -39,7 +45,7 @@ module.exports.doRegisterUser = function(req, res){
       if(response && response.statusCode === 201){        
         var data;
           data = body;
-          res.render('user-profile',{name:data.name, lastname:data.lastname, email:data.email, dni:data.dni, phone: data.phone});        
+          res.render('user-profile',{ user:data});        
 
       } else{
          console.log("No existe!");

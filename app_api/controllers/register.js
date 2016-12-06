@@ -10,15 +10,21 @@ var sendJsonResponse = function(res, status, content) {
 //Crea un usuario
 module.exports.userCreate = function(req, res){
    
+   
 
 	User.create({
 		name: req.body.name,
-		lastname: req.body.lastname,
-		email : req.body.email,
-		password: req.body.password,
-		dni: req.body.dni,
-		phone: req.body.phone,
-		sex : req.body.sex
+        lastname: req.body.lastname,
+        email : req.body.email,
+        password: req.body.password,
+        dni: req.body.dni,
+        phone: req.body.phone,
+        sex : req.body.sex,
+        type : req.body.type,
+        nacDia : req.body.dia,
+        nacMes : req.body.mes,
+        nacAnio :req.body.anio
+
 	}, function(err, usuarios){
 		if(err){
 			console.log("ER!");
@@ -131,8 +137,7 @@ module.exports.updateOneUser = function(req, res){
 		  		sendJsonResponse(res, 400,err);
 		  		return;
 		  	}
-            console.log("Actualizando en API name : "+usuario.name);            
-           console.log("Actualizando en API par : "+req.body.name);
+           
 		  	usuario.name = req.body.name;
 		  	usuario.lastname = req.body.lastname;
 		  	usuario.email = req.body.email;

@@ -1,0 +1,58 @@
+#body-teams{
+  background-color : white;
+  color: #2c3e50;
+  margin-top: 50px;
+  padding-top: 20px;
+  border-radius: 10px;
+
+}
+
+#footer-team{
+  background-color: #2c3e50;
+  padding: 20px 0px 20px 0px;
+  color:white;
+
+}
+
+#footer-team small{
+	text-align: center;
+
+}
+.filter-side{
+    padding: 0px 40px 0px 0px;
+}
+
+.list-teams-item{
+  
+  border-bottom: 2px solid #C0C0C0;
+
+}
+
+.list-team-item-data{
+
+    padding-top: 10px;
+
+}
+
+.list-team-item-data h4{
+
+    color: #2c3e50;
+
+}
+
+.img-teams{
+
+	padding-left: 20px;
+}
+
+.name-team a{
+ color: black;
+ text-align:  center;
+
+}
+
+.list-team-item-photo{
+
+	padding-top: 5px;
+	padding-left: 30px;
+}

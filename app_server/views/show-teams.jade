@@ -1,0 +1,112 @@
+doctype html
+include _includes/mixins
+html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.css')
+    link(rel='stylesheet', href='/bootstrap/css/flatly-bootstrap.min.css') 
+    link(rel='stylesheet', href='/stylesheets/style_teams.css')
+  body
+    .navbar.navbar-default.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') GESTOR
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-main', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #navbar-main.navbar-collapse.collapse(aria-expanded='false', style='height: 1px;')
+          ul.nav.navbar-nav
+            li
+              a(href='/register/') Registro
+            li
+              a(href='/team/') Mi Equipo
+            li
+              a(href='#modals' data-toggle='modal') Perfil
+                  
+    .container
+      .container#body-teams
+        .row
+          .col-md-9        
+            h3= title
+            h4
+              a(href="#") Que esperas para inscribir a tu Equipo!
+          .col-md-3
+            img(src="/images/premier.png"  class="img-responsive" style="width:150; height:60px;")
+        .row
+          hr
+          .col-md-2.filter-side
+            h4 Filter
+            br
+            #search
+              select#filter.form-control.input-sm(name="filter")
+                option Todos
+                option Nombre
+                option Entrenador
+                option Ciudad
+                option Ranking
+                option Categoria
+                option Campeonato
+              br
+              input#entry.form-control(name="entry" value="")
+              br
+              button.btn.btn-default(onclick="clickFilter()") Search
+              br
+              br
+
+          .col-md-8
+            .row#list-teams.list-teams
+
+          .col-md-2
+
+        .row
+          .col-md-12
+           hr
+
+            
+    footer
+      .row
+        .col-xs-12#footer-team
+          p.text-center &copy; Gestor de Clubes 2016
+          
+    
+   
+    
+    script(src='/javascripts/jquery-3.1.1.min.js')
+    script(src='/javascripts/jquery-3.1.1.min.js')
+    script(src='/javascripts/jquery_teams.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+

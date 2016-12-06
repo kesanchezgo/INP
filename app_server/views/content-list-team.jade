@@ -1,0 +1,30 @@
+if teams          
+          each team in teams
+            .col-xs-12.list-teams-item          
+              .col-xs-12.col-sm-4.col-md-3.list-team-item-photo
+                h4.name-team
+                  a(href="#")= team.nombre
+                h4.img-teams
+                  img(src= "/images/melgar.png" style="width:50px; heigth:60px;" alt= "imagen Melgar")
+             
+              .col-xs-12.col-sm-8.col-md-6.list-team-item-data
+                h4
+                  p Coach: #{team.entrenador}              
+                p City:  #{team.ciudad}              
+                p Category:  #{team.category} 
+                span ranking: 
+                  small &nbsp;
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star
+                    span.glyphicon.glyphicon-star-empty
+                    span.glyphicon.glyphicon-star-empty                    
+                br
+                a(href="#") Ver mas
+                br
+                br
+              .col-md-3.hidden-xs.hidden-sm
+                h4 camiseta
+                img(src= "/images/camiseta_melgar.jpg" style="width:100px; heigth:100px;" alt= "imagen Melgar")
+
+              

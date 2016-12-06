@@ -12,8 +12,9 @@ html(lang='es')
 	body
 		#header.container
 
-			+nav2("GESTOR", "dropdown_menu", name)
-				+nav_item( "/team/") Mi Equipo
+			+nav2("GESTOR", "dropdown_menu", user.name)
+				+nav_item( "/myTeam/") Mi Equipo
+				+nav_item( "/myTeam/register") Registrar Equipo
 				+nav_item( "#" ) Resultados
 				+nav_item_dropdown( "#" )( label="Campeonatos" )
 					+nav_item( "#" ) Buscar
@@ -38,20 +39,20 @@ html(lang='es')
 							span.iconM-star
 						h4 Nombres:
 							.datos
-								p= name
+								p= user.name
 						
 						h4 Apellidos:
 							.datos
-								p= lastname
+								p= user.lastname
 						h4 Fecha Nacimiento:
 							.datos
-								p 11 de Julio de 1983
+								p #{user.nacDia} de #{user.nacMes} de #{user.nacAnio}
 						h4 E-mail:
 							.datos
-								p= email
+								p= user.email
 						h4 Teléfono:
 							.datos
-								p= phone
+								p= user.phone
 						center
 							+button("info", "#")
 								span.iconM-save Modificar

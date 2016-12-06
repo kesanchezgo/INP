@@ -23,6 +23,13 @@ block content
           br
           input#phone.form-control(type='tel', placeholder='Telefono' , name='phone', required)
           br
+          select#type.form-control(name='type', style='padding-left: 6px;')
+            option(value='0') Tipo de Usuario
+            option(value='jugador') Jugador
+            option(value='arbitro') Arbitro
+            option(value='aficionado') Aficionado            
+            option(value='coach') Coach
+          br
           select#sex.form-control(name='sex', style='padding-left: 6px;')
             option(value='0') Selecciona tu género
             option(value='femenino') Femenino
@@ -33,17 +40,17 @@ block content
 
               label.control-label.col-xs-12.col-sm-3.col-md-12(style='text-align: center; padding-bottom: 10px;') Cumpleaños       
               .col-xs-4.col-sm-3.col-md-4
-                select#dia.form-control(style='padding-left:3px; padding-right:0px;')
+                select#dia.form-control(name="dia", style='padding-left:3px; padding-right:0px;')
                   option(value='0') Día
-                  +generarOption(1,31)
+                  +generarOption(1,31,d)
               .col-xs-4.col-sm-3.col-md-4.reducir-m
-                select#mes.form-control(style='padding-left:3px; padding-right:0px;')
+                select#mes.form-control(name="mes", style='padding-left:3px; padding-right:0px;')
                   option(value='0') Mes
                   +getMeses()
               .col-xs-4.col-sm-3.col-md-4
-                select#anio.form-control(style='padding-left:3px;padding-right:0px;')
+                select#anio.form-control(name="anio", style='padding-left:3px;padding-right:0px;')
                   option(value='0') Año
-                  +generarOption(1950,2010)
+                  +generarOption(1950,2010,a)
           br
           button#boton-reg.btn.btn-success.btn-lg.btn-block Regístrate
           hr

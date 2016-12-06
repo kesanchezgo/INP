@@ -1,0 +1,34 @@
+extends layout
+
+include _includes/sharedHTMLfunctions
+
+block content
+  #banner.page-header
+    .col-xs-12.col-sm-8.col-md-6.col-sm-offset-2.col-md-offset-3.section-p
+      section.articulo-g.main.row
+        form.form-horizontal(action="/team/register", method="post", role="form")
+          br
+          h2.text-center #{title}
+          br
+          br
+          input#name_team.form-control(type='text' placeholder='Nombres del Equipo' , name='name_team', required)
+          br
+          input#coach_team.form-control(type='text', placeholder='Entrenador' , name='coach_team', required)
+          br
+          input#ciudad_team.form-control(type='text', placeholder='Ciudad' , name='ciudad_team', required)
+          br                   
+          select#category_team.form-control(name='category_team', style='padding-left: 6px;')
+            option(value='1') 1ra division
+            option(value='2') 2da division
+            option(value='3') 3ra division
+          br
+          label(for="description_team") Descripcion:
+          textarea#description_team.form-control(name="description_team", rows="3")         
+          br
+          br
+          
+          button#boton-reg.btn.btn-success.btn-lg.btn-block Regístrar
+          hr
+          
+          
+
